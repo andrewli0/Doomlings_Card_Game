@@ -1,0 +1,395 @@
+[gd_scene load_steps=17 format=3 uid="uid://cs7dmxoegvpay"]
+
+[ext_resource type="PackedScene" uid="uid://co5r1olo3ajql" path="res://Scenes/CardSlot.tscn" id="1_t6gws"]
+[ext_resource type="Script" path="res://Scripts/GameSetUp.gd" id="1_w8s1g"]
+[ext_resource type="Script" path="res://Scripts/CardManager.gd" id="2_pln82"]
+[ext_resource type="Script" path="res://Scripts/InputManager.gd" id="3_vus1n"]
+[ext_resource type="Script" path="res://Scripts/PlayerHand.gd" id="4_8raov"]
+[ext_resource type="Script" path="res://Scripts/TraitDeck.gd" id="5_jp8gq"]
+[ext_resource type="Texture2D" uid="uid://dj00ahv2i2u4j" path="res://Assets/TraitCardBackImage.png" id="6_cknux"]
+[ext_resource type="Script" path="res://Scripts/TraitDiscardPile.gd" id="7_1bfxj"]
+[ext_resource type="Script" path="res://Scripts/AgeDeck.gd" id="8_n1f37"]
+[ext_resource type="Texture2D" uid="uid://cbb1jj7esrdh3" path="res://Assets/AgeCardBackImage.png" id="9_hqqeu"]
+[ext_resource type="Script" path="res://Scripts/AgeDiscardPile.gd" id="10_qsgc7"]
+[ext_resource type="Script" path="res://Scripts/PortalToTraitDeckTop.gd" id="11_5m5hv"]
+[ext_resource type="Texture2D" uid="uid://ceufs5hna3qft" path="res://Assets/Deck.png" id="12_lncs6"]
+[ext_resource type="Script" path="res://Scripts/BattleManager.gd" id="13_6ftge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhvkt"]
+size = Vector2(195, 266)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq4fg"]
+size = Vector2(179, 264)
+
+[node name="PlayerField" type="Node2D"]
+script = ExtResource("1_w8s1g")
+
+[node name="CardSlots" type="Node2D" parent="."]
+
+[node name="CurrentAgeSlot" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(225, 600)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 1500)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot2" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(672, 1500)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot3" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 1500)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot4" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 1500)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot5" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 1500)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot6" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 1280)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot7" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(670, 1280)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot8" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 1280)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot9" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 1280)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot10" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 1280)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot11" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 1060)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot12" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(670, 1060)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot13" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 1060)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot14" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 1060)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot15" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 1060)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot16" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 840)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot17" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(670, 840)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot18" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 840)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot19" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 840)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot20" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 840)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot21" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 620)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot22" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(670, 620)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot23" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 620)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot24" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 620)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot25" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 620)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot26" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(500, 400)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot27" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(670, 400)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot28" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(840, 400)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot29" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1010, 400)
+scale = Vector2(0.8, 0.8)
+
+[node name="CardSlot30" parent="CardSlots" instance=ExtResource("1_t6gws")]
+position = Vector2(1180, 400)
+scale = Vector2(0.8, 0.8)
+
+[node name="Card Manager" type="Node2D" parent="."]
+script = ExtResource("2_pln82")
+
+[node name="InputManager" type="Node2D" parent="."]
+script = ExtResource("3_vus1n")
+
+[node name="PlayerHand" type="Node2D" parent="."]
+script = ExtResource("4_8raov")
+
+[node name="TraitDeck" type="Node2D" parent="."]
+position = Vector2(300, 1500)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("5_jp8gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TraitDeck"]
+z_index = -2
+position = Vector2(-0.250002, -0.0998929)
+scale = Vector2(0.561321, 0.591518)
+texture = ExtResource("6_cknux")
+
+[node name="Area2D" type="Area2D" parent="TraitDeck"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TraitDeck/Area2D"]
+position = Vector2(0, 0.400024)
+shape = SubResource("RectangleShape2D_hhvkt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TraitDeck"]
+visible = false
+z_index = -2
+offset_left = -10.0
+offset_top = 80.0
+offset_right = 30.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+scroll_active = false
+
+[node name="TraitDeckTimer" type="Timer" parent="TraitDeck"]
+
+[node name="TraitDiscardPile" type="Node2D" parent="."]
+position = Vector2(300, 1060)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("7_1bfxj")
+
+[node name="Sprite2D" type="Sprite2D" parent="TraitDiscardPile"]
+z_index = -2
+position = Vector2(1.14441e-05, -1.14441e-05)
+scale = Vector2(0.558176, 0.597098)
+texture = ExtResource("6_cknux")
+
+[node name="Area2D" type="Area2D" parent="TraitDiscardPile"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TraitDiscardPile/Area2D"]
+position = Vector2(0, 0.400024)
+shape = SubResource("RectangleShape2D_hhvkt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TraitDiscardPile/Area2D"]
+offset_left = -66.25
+offset_top = 47.5
+offset_right = 74.75
+offset_bottom = 80.5
+text = "Trait Discard Pile"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TraitDiscardPile"]
+z_index = -2
+offset_left = -10.0
+offset_top = 80.0
+offset_right = 30.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="AgeDeck" type="Node2D" parent="."]
+position = Vector2(150, 1500)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("8_n1f37")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgeDeck"]
+z_index = -2
+position = Vector2(1.25, -0.624893)
+scale = Vector2(0.270579, 0.276767)
+texture = ExtResource("9_hqqeu")
+
+[node name="Area2D" type="Area2D" parent="AgeDeck"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgeDeck/Area2D"]
+position = Vector2(7.5, 0.400024)
+shape = SubResource("RectangleShape2D_hhvkt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AgeDeck"]
+z_index = -2
+offset_left = -10.0
+offset_top = 80.0
+offset_right = 30.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+
+[node name="AgeDiscardPile" type="Node2D" parent="."]
+position = Vector2(150, 1060)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("10_qsgc7")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgeDiscardPile"]
+z_index = -2
+position = Vector2(1.25, -0.624893)
+scale = Vector2(0.270579, 0.276767)
+texture = ExtResource("9_hqqeu")
+
+[node name="Area2D" type="Area2D" parent="AgeDiscardPile"]
+collision_layer = 1024
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgeDiscardPile/Area2D"]
+position = Vector2(0, 0.400024)
+shape = SubResource("RectangleShape2D_hhvkt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AgeDiscardPile"]
+z_index = -2
+offset_left = -10.0
+offset_top = 80.0
+offset_right = 30.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+text = "0"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="AgeDiscardPile"]
+offset_left = -65.0
+offset_top = 46.2499
+offset_right = 77.0
+offset_bottom = 76.2499
+text = "Age Discard Pile"
+
+[node name="PortalToTraitDeckTop" type="Node2D" parent="."]
+position = Vector2(300, 1280)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("11_5m5hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalToTraitDeckTop"]
+texture = ExtResource("12_lncs6")
+
+[node name="Area2D" type="Area2D" parent="PortalToTraitDeckTop"]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToTraitDeckTop/Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vq4fg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PortalToTraitDeckTop/Area2D"]
+offset_left = -71.0
+offset_top = 63.0
+offset_right = 77.0
+offset_bottom = 116.0
+text = "Portal to TraitDeck Top"
+
+[node name="PortalToTraitDiscardTop" type="Node2D" parent="."]
+position = Vector2(300, 840)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("11_5m5hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalToTraitDiscardTop"]
+texture = ExtResource("12_lncs6")
+
+[node name="Area2D" type="Area2D" parent="PortalToTraitDiscardTop"]
+collision_layer = 512
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToTraitDiscardTop/Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vq4fg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PortalToTraitDiscardTop/Area2D"]
+offset_left = -71.0
+offset_top = 63.0
+offset_right = 77.0
+offset_bottom = 116.0
+text = "Portal to Trait Discard Top"
+
+[node name="PortalToAgeDeckTop" type="Node2D" parent="."]
+position = Vector2(150, 1280)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("11_5m5hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalToAgeDeckTop"]
+texture = ExtResource("12_lncs6")
+
+[node name="Area2D" type="Area2D" parent="PortalToAgeDeckTop"]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToAgeDeckTop/Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vq4fg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PortalToAgeDeckTop/Area2D"]
+offset_left = -72.0
+offset_top = 69.0
+offset_right = 78.0
+offset_bottom = 115.0
+text = "Portal to Age Deck Top"
+
+[node name="PortalToAgeDiscardTop" type="Node2D" parent="."]
+position = Vector2(150, 840)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("11_5m5hv")
+
+[node name="Sprite2D" type="Sprite2D" parent="PortalToAgeDiscardTop"]
+texture = ExtResource("12_lncs6")
+
+[node name="Area2D" type="Area2D" parent="PortalToAgeDiscardTop"]
+collision_layer = 2048
+collision_mask = 2048
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PortalToAgeDiscardTop/Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_vq4fg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PortalToAgeDiscardTop/Area2D"]
+offset_left = -72.0
+offset_top = 69.0
+offset_right = 78.0
+offset_bottom = 115.0
+text = "Portal to Age Discard Top"
+
+[node name="EndTurnButton" type="Button" parent="."]
+visible = false
+offset_left = 78.0
+offset_top = 1673.0
+offset_right = 223.0
+offset_bottom = 1764.0
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "End Turn"
+
+[node name="BattleManager" type="Node" parent="."]
+script = ExtResource("13_6ftge")
+
+[node name="BattleTimer" type="Timer" parent="."]

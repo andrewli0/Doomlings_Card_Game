@@ -1,0 +1,10 @@
+1. Viewport
+	Max Viewport of 15 inch mac book (obtained from binary searching viewport settings values)
+	Max Width ≈ 3410
+	Max Height ≈ 2080
+
+2. Video #8 Opponent t = 8:00 disables the collision on opponent cards.
+
+3. If it is difficult to drag a card out of a card slot 
+(i.e. you click but the drag doesn't start), click on an empty card slot, then try again.
+This should "reset" your drag

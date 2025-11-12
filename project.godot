@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="PassAndPlayDoomlings*"
+run/main_scene="res://Scenes/Main.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/size/viewport_width=2880
+window/size/viewport_height=2000
+window/size/mode=3
+window/size/initial_position_type=0
+window/vsync/vsync_mode=0
+
+[layer_names]
+
+2d_physics/layer_1="Card Collision Mask"
+2d_physics/layer_2="CardSlot Collision Mask"
+2d_physics/layer_3="TraitDeck Collision Mask"
+2d_physics/layer_4="AgeDeck Collision Mask"
+2d_physics/layer_7="PortalToAgeDeckTop"
+2d_physics/layer_8="PortalToTraitDeckTop"
+2d_physics/layer_9="TraitDiscardPile"
+2d_physics/layer_10="PortalToTraitDiscardTop"
+2d_physics/layer_11="AgeDiscardPile"
+2d_physics/layer_12="PortalToAgeDiscardTop"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
